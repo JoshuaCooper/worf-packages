@@ -1,0 +1,7 @@
+apiVersion: worf.dev/v1alpha1
+kind: Package
+metadata:
+  name: hello-worf
+  owners: [platform-team]
+spec:
+  rebuild: on-change
