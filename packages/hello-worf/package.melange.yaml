@@ -23,3 +23,8 @@ pipeline:
 
   - runs: |
       install -Dm755 hello-worf.sh "${{targets.destdir}}/usr/bin/hello-worf"
+
+test:
+  pipeline:
+    - runs: |
+        hello-worf | grep -qx "hello from worf"
