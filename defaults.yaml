@@ -1,0 +1,5 @@
+apiVersion: worf.dev/v1alpha1
+kind: Defaults
+spec:
+  profile: wolfi
+  archs: [x86_64]

@@ -1,0 +1,25 @@
+package:
+  name: hello-worf
+  version: 0.1.0
+  epoch: 0
+  description: Prints a greeting. Smoke test for WORF package builds.
+  copyright:
+    - license: MIT
+  dependencies:
+    runtime:
+      - busybox
+
+environment:
+  contents:
+    packages:
+      - busybox
+
+pipeline:
+  - uses: git-checkout
+    with:
+      repository: https://github.com/JoshuaCooper/worf-sample-src.git
+      tag: hello-worf/v${{package.version}}
+      expected-commit: 37f8e607369f113eaffe65d65cddb338b93def73
+
+  - runs: |
+      install -Dm755 hello-worf.sh "${{targets.destdir}}/usr/bin/hello-worf"
