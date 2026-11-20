@@ -11,5 +11,4 @@ packages/<name>/
   patches/, files/            optional
 ```
 
-Annotated examples and the rules:
-[worf/examples/package-repo](http://10.0.10.5:30008/jcooper/worf/src/branch/main/examples/package-repo)
+Annotated examples and the rules live in the WORF repo, `examples/package-repo/`.
